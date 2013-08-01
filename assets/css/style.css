@@ -1,0 +1,197 @@
+/* Http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   Licença: nenhum (domínio público)
+*/
+
+html, body, div, span, applet, objeto, iframe
+h1, h2, h3, h4, H5, H6, p, blockquote, pre,
+a, abbr, endereço sigla, grande, citar, código,
+del, dfn, em, img, ins, kbd, q, s, samp,
+greve, pequeno, forte, sub, sup, tt, var,
+b, u, i, centro,
+dl, dt, dd, ol, ul, li,
+fieldset, formulário, etiqueta, legenda,
+tabela, a legenda, tbody, tfoot, thead, tr, th, td,
+lona artigo, de lado, detalhes, embed, 
+figura, figcaption, cabeçalho, rodapé, hgroup, 
+menu, nav, de saída, rubi, seção, resumo,
+tempo, marca, áudio, vídeo {
+	margin: 0;
+	padding: 0;
+	margem: 0;
+	font-size: 100%;
+	font: herdar;
+	vertical-align: baseline;
+}
+/* HTML5 reposição exibição papel para navegadores mais antigos */
+artigo, de lado, detalhes, figcaption, figura, 
+cabeçalho, rodapé, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ul, ol {
+	list-style: none;
+}
+blockquote, q {
+	citações: nenhum;
+}
+blockquote: antes, blockquote: depois,
+q: antes, q: after {
+	conteúdo:'';
+	conteúdo: none;
+}
+
+body {
+	font-family: arial;
+	color: #333;
+	background: url(bg.png) #E9E9E9;
+}
+
+h1 {
+	text-align: center;
+}
+/*Tables*/
+
+table {
+	margin: 20px auto;
+	border: 1px solid #333;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+td {
+	border: 1px solid #333;
+	padding: 10px 5px;
+	font-size: 0.8em;
+	width: 60px;
+	line-height: 1.3em;
+}
+
+thead {
+	background: #444;
+	color: #fff;
+}
+th {
+	padding: 5px;	
+}
+
+h1 {
+	/*-webkit-mask-image: url(bg.png);*/
+}
+[colspan="2"] {
+	text-align: center;
+	vertical-align: middle;
+}
+[rowspan="3"] {
+	text-align: center;
+	vertical-align: middle;
+	font-weight: bold;
+}
+
+.materia {
+	position: relative;	
+	z-index: 10;
+
+}
+.email {
+	position: relative;
+}
+.professor td {
+	background: #ccc;
+	font-size: 0.7em;
+}
+.sala {
+	background: #999;
+	color: #fff;
+	text-align: center;
+}
+
+/*.materia:hover:after {
+	content: attr(data-time);
+	position: absolute;
+	background: rgba(0,0,0,0.8);
+	color: #fff;
+	bottom: 0;
+	z-index: 9;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	line-height: 40px;
+	-webkit-webkit-transition: all 1s linear;
+	-moz-webkit-transition: all 1s linear;
+	-ms-webkit-transition: all 1s linear;
+	-o-webkit-transition: all 1s linear;
+	webkit-transition: all 1s linear;
+}
+
+.email:hover:after {
+	content: attr(data-email);
+	position: absolute;
+	background: rgba(0,0,0,0.8);
+	color: #fff;
+	bottom: 0;
+	z-index: 9999;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	line-height: 20px;
+}*/
+
+footer {
+	text-align: center;
+}
+
+
+
+
+
+.materia[data-time]:before {
+	content: "";
+	position: absolute;
+	border-top: 10px solid #fff;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	visibility: hidden;
+	opacity: 0;
+	top: -5px;
+	left: 37%;
+	z-index: 9;
+	-webkit-filter: drop-shadow(0px 1px 0px #666);
+}
+
+.materia[data-time]:after {
+	content: attr(data-time);
+	position: absolute;
+	color: black;
+	top: -31px;
+	left: 12%;
+	background: #fff;
+	padding: 5px 15px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	white-space: nowrap;
+	visibility: hidden;
+	opacity: 0;
+
+	box-shadow: 0px 0px 3px #000;
+
+}
+
+.materia[data-time]:hover:before, .materia[data-time]:hover:after {
+	visibility: visible;
+	-webkit-transition: all 0.3s linear;
+	opacity: 1;
+
+}
+
+@media only screen and (min-width: 480px) {
+	table {
+		width: 90%;
+	}
+	td {
+		padding: 15px 5px;
+	}
+}
